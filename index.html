@@ -2,16 +2,33 @@
 <head>
     <title>Chat entre deux personnes en JS WebSocket</title>
     <script type="text/javascript" src="/socket.io/socket.io.js"></script>
-    <link rel="Stylesheet" href="style.css" type="text/css">
+    <style>
+        body {font: 14px Helvetica; overflow-y: hidden}
+        #message {border-color: black; padding: 10px; width: 90%; margin-right: .5%;}
+        button {width: 8%; background: blueviolet; border: none; padding: 11px;}
+        #record{list-style-type: none; margin: 0; padding: 0; display: grid;}
+        #record span {padding: 5px 10px;}
+        #record span:nth-child(even) {background: #eee;}
+        #record {margin-bottom: 40px}
+        #form {position: fixed; bottom: 10px; width: 100%;}
+    </style>
 </head>
 <body>
-<ul id="record"></ul>
-<input id="message"/><button>Send</button>
+<div id="record">
+
+</div>
+<div id="form">
+    <input id="message"><button onclick="msg()">Envoyer</button>
+</div>
 <script>
     const socket = io();
     socket.emit("firstConnection", "Hello Socket Server !");
 
-    socket.on("message", data => console.log(data));
+    socket.on("message", data => document.getElementById('record').innerHTML += "<span>" + data + "</span>");
+
+    function msg(){
+        socket.emit("message", document.getElementById('message').value);
+    }
 </script>
 </body>
 </html>

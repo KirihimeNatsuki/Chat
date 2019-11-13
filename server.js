@@ -14,7 +14,7 @@ fs.readFile('./index.html', 'utf8', (err, data) => {
 
         let messages = [];
         io.on('connection', client => {
-            client.on('firstConnection', () => client.emit('message', messages));
+            client.on('firstConnection', () => client.emit(console.log(messages)));
 
             client.on('message', data => {
                 messages.push(data);

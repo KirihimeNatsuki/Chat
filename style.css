@@ -1,21 +1,7 @@
-body {
-    font: 13px Helvetica, Arial;
-}
-input {
-    border: 0; padding: 10px; width: 90%; margin-right: .5%;
-}
-button {
-    width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px;
-}
-#record{
-    list-style-type: none; margin: 0; padding: 0;
-}
-#record li {
-    padding: 5px 10px;
-}
-#record li:nth-child(odd) {
-    background: #eee;
-}
-#record {
-    margin-bottom: 40px
-}
+body {font: 13px Helvetica, Arial;}
+#message {border: 0; padding: 10px; width: 90%; margin-right: .5%;}
+button {width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px;}
+#record{list-style-type: none; margin: 0; padding: 0;}
+#record li {padding: 5px 10px;}
+#record li:nth-child(odd) {background: #eee;}
+#record {margin-bottom: 40px}
