@@ -1,0 +1,15 @@
+<html lang="fr" dir="ltr">
+<head>
+    <title>Chat entre deux personnes en JS WebSocket</title>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <link rel="Stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<script>
+    const socket = io();
+    socket.emit("firstConnection", "Hello Socket Server !");
+
+    socket.on("message", data => console.log(data));
+</script>
+</body>
+</html>
