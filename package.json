@@ -9,8 +9,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "B2_JS : Chat",
   "dependencies": {
     "socket.io": "^2.3.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KirihimeNatsuki/Chat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KirihimeNatsuki/Chat/issues"
+  },
+  "homepage": "https://github.com/KirihimeNatsuki/Chat#readme"
 }

@@ -5,6 +5,8 @@
     <link rel="Stylesheet" href="style.css" type="text/css">
 </head>
 <body>
+<ul id="record"></ul>
+<input id="message"/><button>Send</button>
 <script>
     const socket = io();
     socket.emit("firstConnection", "Hello Socket Server !");
